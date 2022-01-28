@@ -7,11 +7,9 @@ Complete documentation:
 [https://apidoc.nusasms.com/](https://apidoc.nusasms.com/)
 
 ## Usage
-1. Download the `NusaSms.php`.
-2. Put it in the `app/Services` folder.
-3. Download the `nusasms.php`.
-4. Put it in the `config` folder.
-5. Set the `.env` as following:
+1. Download or clone this project.
+2. Put this project to your Laravel project directory.
+3. Set the `.env` as following:
    ```env
    NUSASMS_ENV=development
    # or set NUSASMS_ENV to production
