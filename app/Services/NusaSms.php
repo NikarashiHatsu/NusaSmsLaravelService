@@ -39,7 +39,7 @@ class NusaSms {
      *
      * @var string|null
      */
-    private static $sender = null;
+    private static $sender;
 
     /**
      * The WA message.
@@ -203,7 +203,7 @@ class NusaSms {
             ->withoutVerifying()
             ->post($endpoint, [
                 'caption' => self::$caption,
-                'sender' => self::$sender,
+                'sender' => self::$sender ?? config('nusasms.nusasms_sender'),
                 'destination' => $destination,
                 'media_base64' => self::$base64Media,
                 'file_name' => self::$fileName,
@@ -231,7 +231,7 @@ class NusaSms {
             ->withoutVerifying()
             ->post($endpoint, [
                 'caption' => self::$caption,
-                'sender' => self::$sender,
+                'sender' => self::$sender ?? config('nusasms.nusasms_sender'),
                 'destination' => $destination,
                 'media_url' => self::$urlMedia,
             ]);
@@ -258,7 +258,7 @@ class NusaSms {
             ->withoutVerifying()
             ->post($endpoint, [
                 'destination' => $destination,
-                'sender' => self::$sender,
+                'sender' => self::$sender ?? config('nusasms.nusasms_sender'),
                 'message' => self::$message,
             ]);
 

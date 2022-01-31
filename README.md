@@ -15,6 +15,7 @@ Complete documentation:
    # or set NUSASMS_ENV to production
    NUSASMS_URL=https://api.nusasms.com
    NUSASMS_DEV_URL=https://dev.nusasms.com
+   NUSASMS_SENDER=
    NUSASMS_API_KEY=<yourApiKey>
    NUSASMS_DEV_KEY=DEV_TESTING_API_KEY
    ```
